@@ -1,13 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        Node node1, node2, node3;
-        node1 = new Node(1);
-        node2 = new Node(2);
-        node3 = new Node(3);
-
-        node1.setNext(node2);
-        node2.setNext(node3);
-
-        System.out.println();
+        SinglyLinkedList linkedList = new SinglyLinkedList();
+        linkedList.addFirst(10);
+        linkedList.addFirst(20);
+        linkedList.display(); // 20->10
+        linkedList.addLast(30);
+        linkedList.display(); // 20->10->30
+        linkedList.addLast(40);
+        linkedList.display(); // 20->10->30->40
+        linkedList.add(50, 1);
+        linkedList.display(); // 20->50->10->30->40
+        linkedList.add(0, 0);
+        linkedList.display();
+        linkedList.add(70, 6);
+        linkedList.display();
     }
 }
